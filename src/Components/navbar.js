@@ -33,7 +33,10 @@ const Navbar = () => {
             <div className="nav-right">
                 <Link to="/" className="nav-link">Home</Link>
                 {isLoggedIn ? (
-                    <button onClick={handleLogout} className="nav-btn">Logout</button>
+                    <>
+                        <Link to="/add-hospital" className="nav-btn">Add Hospital</Link>
+                        <button onClick={handleLogout} className="nav-btn">Logout</button>
+                    </>
                 ) : (
                     <>
                         <Link to="/signup" className="nav-btn">Signup</Link>
